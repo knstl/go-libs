@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"strings"
 
+	sdk "github.com/cosmos/cosmos-sdk/types"
 	"golang.org/x/crypto/sha3"
 )
 
@@ -49,4 +50,25 @@ func EIP55Checksum(unchecksummed string) (string, error) {
 	val := string(result)
 
 	return "0x" + val, nil
+}
+
+func GetValAddressAndConsAddress(accAddress string) (string, string, error) {
+	acc, err := sdk.AccAddressFromBech32(accAddress)
+	if err != nil {
+		return "", "", fmt.Errorf("failed to create an AccAddress from a Bech32: %w", err)
+	}
+
+	hex := fmt.Sprintf("%+v", acc)
+
+	valAddress, err := sdk.ValAddressFromHex(hex)
+	if err != nil {
+		return "", "", fmt.Errorf("failed to create a Val from hex: %w", err)
+	}
+
+	consAddress, err := sdk.ConsAddressFromHex(hex)
+	if err != nil {
+		return "", "", fmt.Errorf("failed to create ConsAddr from hex: %w", err)
+	}
+
+	return valAddress.String(), consAddress.String(), nil
 }

@@ -5,7 +5,7 @@ go 1.17
 replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 
 require (
-	github.com/cosmos/cosmos-sdk v0.43.0
+	github.com/cosmos/cosmos-sdk v0.44.2
 	github.com/cosmos/go-bip39 v1.0.0
 	github.com/evalphobia/logrus_sentry v0.8.2
 	github.com/getsentry/raven-go v0.2.0
@@ -41,7 +41,7 @@ require (
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/confio/ics23/go v0.7.0 // indirect
 	github.com/cosmos/gorocksdb v1.2.0 // indirect
-	github.com/cosmos/iavl v0.16.0 // indirect
+	github.com/cosmos/iavl v0.17.1 // indirect
 	github.com/cosmos/ledger-cosmos-go v0.11.1 // indirect
 	github.com/cosmos/ledger-go v0.9.2 // indirect
 	github.com/danieljoos/wincred v1.1.2 // indirect
@@ -110,7 +110,7 @@ require (
 	github.com/tendermint/btcd v0.1.1 // indirect
 	github.com/tendermint/crypto v0.0.0-20191022145703-50d29ede1e15 // indirect
 	github.com/tendermint/go-amino v0.16.0 // indirect
-	github.com/tendermint/tendermint v0.34.21 // indirect
+	github.com/tendermint/tendermint v0.34.19 // indirect
 	github.com/tendermint/tm-db v0.6.7 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	github.com/zondax/hid v0.9.0 // indirect
