@@ -122,7 +122,7 @@ require (
 )
 
 require (
-	github.com/cosmos/cosmos-sdk v0.43.0
+	github.com/cosmos/cosmos-sdk v0.44.2
 	github.com/evalphobia/logrus_sentry v0.8.2
 	github.com/gin-contrib/cors v1.4.0
 	github.com/shopspring/decimal v1.3.1
