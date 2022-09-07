@@ -11,11 +11,13 @@ const (
 	StatusCompleted Status = "completed"
 	StatusError     Status = "error"
 
-	TxTransfer   TransactionType = "transfer"
-	TxDelegate   TransactionType = "delegate"
-	TxRedelegate TransactionType = "redelegate"
-	TxUnbound    TransactionType = "unbound"
-	TxReward     TransactionType = "reward"
+	TxSend                    TransactionType = "send"
+	TxDelegate                TransactionType = "delegate"
+	TxBeginRedelegate         TransactionType = "begin_redelegate"
+	TxUndelegate              TransactionType = "undelegate"
+	TxWithdrawDelegatorReward TransactionType = "withdraw_delegator_reward"
+	TxVote                    TransactionType = "vote"
+	TxCreateValidator         TransactionType = "create_validator"
 )
 
 type (
@@ -45,43 +47,4 @@ type (
 	}
 
 	Txs []Tx
-
-	// Transfer describes the transfer metadata
-	Transfer struct {
-		FromAddr string `json:"from_address"`
-		ToAddr   string `json:"to_address"`
-		Asset    string `json:"asset"`
-		Value    Amount `json:"value"`
-	}
-
-	// Delegate describes the delegate metadata
-	Delegate struct {
-		DelegatorAddr string `json:"delegator_address"`
-		ValidatorAddr string `json:"validator_address"`
-		Asset         string `json:"asset"`
-		Value         Amount `json:"value"`
-	}
-
-	// Redelegate describes the redelegate metadata
-	Redelegate struct {
-		DelegatorAddr    string `json:"delegator_address"`
-		ValidatorSrcAddr string `json:"validator_src_address"`
-		ValidatorDstAddr string `json:"validator_dst_address"`
-		Asset            string `json:"asset"`
-		Value            Amount `json:"value"`
-	}
-
-	// Unbound describes the unbound metadata
-	Unbound struct {
-		DelegatorAddr string `json:"delegator_address"`
-		ValidatorAddr string `json:"validator_address"`
-		Asset         string `json:"asset"`
-		Value         Amount `json:"value"`
-	}
-
-	// Reward describes the reward metadata
-	Reward struct {
-		DelegatorAddr string `json:"delegator_address"`
-		ValidatorAddr string `json:"validator_address"`
-	}
 )
