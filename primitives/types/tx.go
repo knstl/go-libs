@@ -38,6 +38,7 @@ type (
 		Metadata       interface{}     `json:"metadata" bson:"metadata"`
 		GasUsed        string          `json:"gas_used" bson:"gas_used"`
 		GasWanted      string          `json:"gas_wanted" bson:"gas_wanted"`
+		Memo           string          `json:"memo,omitempty"`
 		Fee            Fee             `json:"fee"`
 	}
 
