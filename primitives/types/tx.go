@@ -18,6 +18,7 @@ const (
 	TxWithdrawDelegatorReward TransactionType = "withdraw_delegator_reward"
 	TxVote                    TransactionType = "vote"
 	TxCreateValidator         TransactionType = "create_validator"
+	TxContractCall            TransactionType = "contract_call"
 )
 
 type (
