@@ -12,14 +12,16 @@ import (
 )
 
 const (
-	AmountBscUnit   = "1000000000000000000" // in wei (1 eth)
-	AmountKnstlUnit = "1000000"             // in udarc (1 darc)
+	AmountBscUnit     = "1000000000000000000" // in wei (1 eth)
+	AmountKnstlUnit   = "1000000"             // in udarc (1 darc)
+	AmountSolanalUnit = "1000000"             // in udarc (1 qdarc)
 )
 
 // AmountUnitByChain is a map for getting chain unit of amount.
 var AmountUnitByChain = map[types.ChainType]string{ //nolint:gochecknoglobals
-	types.BSC:   AmountBscUnit,
-	types.KNSTL: AmountKnstlUnit,
+	types.BSC:    AmountBscUnit,
+	types.KNSTL:  AmountKnstlUnit,
+	types.SOLANA: AmountSolanalUnit,
 }
 
 // GetTxAmountByChain converts float string to blockchain unit amount.

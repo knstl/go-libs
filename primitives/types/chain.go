@@ -7,14 +7,16 @@ var ErrChainNotSupported = errors.New("chain is not supported")
 type ChainType string
 
 const (
-	KNSTL = ChainType("KNSTL")
-	BSC   = ChainType("BSC")
+	KNSTL  = ChainType("KNSTL")
+	BSC    = ChainType("BSC")
+	SOLANA = ChainType("SOLANA")
 )
 
 //nolint:gochecknoglobals
 var ChainTypes = map[ChainType]bool{
-	KNSTL: true,
-	BSC:   true,
+	KNSTL:  true,
+	BSC:    true,
+	SOLANA: true,
 }
 
 func IsChainSupported(chain ChainType) bool {
