@@ -56,4 +56,10 @@ type (
 		Asset string `json:"asset"`
 		Value Amount `json:"value"`
 	}
+
+	ContractCallMetadata struct {
+		Asset   string `json:"asset"`
+		Value   Amount `json:"value"`
+		Address string `json:"address"`
+	}
 )
