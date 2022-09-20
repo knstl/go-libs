@@ -50,3 +50,10 @@ type (
 
 	Txs []Tx
 )
+
+type (
+	TransferMetadata struct {
+		Asset string `json:"asset"`
+		Value Amount `json:"value"`
+	}
+)
