@@ -8,9 +8,10 @@ import (
 
 //nolint:gochecknoglobals
 var regexpMap = map[types.ChainType]*regexp.Regexp{
-	types.BSC:    regexp.MustCompile("^0x[0-9a-fA-F]{40}$"),
-	types.KNSTL:  regexp.MustCompile("^darc1[0-9a-zA-Z]{38}$"),
-	types.SOLANA: regexp.MustCompile("^*$"),
+	types.BSC:   regexp.MustCompile("^0x[0-9a-fA-F]{40}$"),
+	types.KNSTL: regexp.MustCompile("^darc1[0-9a-zA-Z]{38}$"),
+	types.SOL:   regexp.MustCompile("^*$"),
+	types.ETH:   regexp.MustCompile("^0x[0-9a-fA-F]{40}$"),
 }
 
 func GetRegexpByChain(chain types.ChainType) (*regexp.Regexp, bool) {
